@@ -1,34 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:generations/src/features/app/widget/app_context.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const GenerationsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class GenerationsApp extends StatelessWidget {
+  const GenerationsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner:false,
-      themeMode: ThemeMode.system,
-      home: Screen1(),
-    );
-  }
-}
-
-class Screen1 extends StatelessWidget {
-  const Screen1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          "Generations App",
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
+    return AppContext();
   }
 }
